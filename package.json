@@ -1,0 +1,42 @@
+{
+  "name": "simple-ticker",
+  "version": "1.0.0",
+  "description": "easy way to get an event at regular intervals",
+  "main": "src-build/index.js",
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "babel src --retain-lines --out-dir src-build",
+    "eslint": "eslint $(find . -not -path '*/*-build/*' -and -not -path '*/node_modules/*' -type f -name '*.es')",
+    "test-project:prj1": "DEBUG=debug*,libs* babel-node test-project/prj1",
+    "test-project:prj2": "DEBUG=debug*,libs* babel-node test-project/prj2",
+    "test-project:prj3": "DEBUG=debug*,libs* babel-node test-project/prj3",
+    "test-project": "npm run test-project:prj1 && npm run test-project:prj2 && npm run test-project:prj3",
+    "test": "npm run eslint && npm run test-project"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nskazki/simple-ticker.git"
+  },
+  "keywords": [
+    "ticker",
+    "time",
+    "interval",
+    "setInterval",
+    "events"
+  ],
+  "author": "nskazki@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nskazki/simple-ticker/issues"
+  },
+  "homepage": "https://github.com/nskazki/simple-ticker#readme",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.6",
+    "eslint": "^1.10.3"
+  },
+  "dependencies": {
+    "debug": "^2.2.0",
+    "simple-debugger": "^1.0.3"
+  }
+}
