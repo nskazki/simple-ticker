@@ -1,6 +1,6 @@
 {
   "name": "simple-ticker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "easy way to get an event at regular intervals",
   "main": "src-build/index.js",
   "scripts": {
