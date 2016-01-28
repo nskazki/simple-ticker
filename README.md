@@ -40,12 +40,12 @@ ticker.init().on('tick', () => {
 })
 
 /*
-    tick: 203.391ms
-    tick: 158.210ms
-    tick: 119.755ms
+    tick: 200.391ms
+    tick: 160.210ms
+    tick: 120.755ms
     tick: 100.517ms
-    tick: 102.342ms
-    tick: 96.856ms
+    tick: 100.342ms
+    tick: 100.856ms
     ...
 */
 ```
@@ -66,8 +66,8 @@ ticker.init().on('tick', () => {
 
 /*
     tick: 101.631ms
-    tick: 103.629ms
-    tick: 102.642ms
-    tick: 103.413ms
+    tick: 100.629ms
+    tick: 101.642ms
+    tick: 100.413ms
 */
 ```
