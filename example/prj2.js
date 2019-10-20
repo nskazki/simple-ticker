@@ -5,7 +5,7 @@
 import Ticker from '../src'
 
 let count = 0
-let ticker = new Ticker(100, 400, 130)
+const ticker = new Ticker(100, 400, 130)
   .init()
   .on('tick', () => {
     count++

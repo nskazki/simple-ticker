@@ -4,7 +4,7 @@ import { debugEvents, debugMethods } from 'simple-debugger'
 import EventEmitter from 'events'
 import Debug from 'debug'
 
-let tickerDebug = new Debug('libs-ticker')
+const tickerDebug = new Debug('libs-ticker')
 
 export default class Ticker extends EventEmitter {
   constructor(_tickSize, _initialTickSize=_tickSize, _reduceStep=_tickSize) {
@@ -12,8 +12,7 @@ export default class Ticker extends EventEmitter {
     this.setMaxListeners(0)
 
     debugEvents(this)
-    debugMethods(this, [ 'on', 'once', 'emit',
-      'addListener', 'removeListener' ])
+    debugMethods(this, ['on', 'once', 'emit', 'addListener', 'removeListener'])
 
     this._status = 'newborn'
     this._config = { _tickSize, _initialTickSize, _reduceStep }
@@ -52,9 +51,9 @@ export default class Ticker extends EventEmitter {
       this._tickCount++
     }
 
-    let real = new Date().valueOf() - this._start
-    let diff = real - this._ideal
-    let realTickSize = this._curTickSize - diff
+    const real = new Date().valueOf() - this._start
+    const diff = real - this._ideal
+    const realTickSize = this._curTickSize - diff
     this._ideal += this._curTickSize
 
     tickerDebug(`stat: \
@@ -70,7 +69,7 @@ export default class Ticker extends EventEmitter {
     if (this._status === 'ticking') {
       this.emit('tick')
     } else {
-      tickerDebug(`first run - without tick`)
+      tickerDebug('first run - without tick')
     }
 
     if (this._status === 'inited') {

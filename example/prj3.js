@@ -8,7 +8,7 @@ let initCount = 0
 let tickCount = 0
 
 console.info('prj3:init')
-let ticker = new Ticker(100, 200)
+const ticker = new Ticker(100, 200)
   .init()
   .on('tick', () => {
     tickCount++
