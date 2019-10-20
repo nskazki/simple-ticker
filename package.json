@@ -20,7 +20,7 @@
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel src --retain-lines --out-dir src-build",
-    "eslint": "eslint $(find . -not -path '*/*-build/*' -not -path '*/node_modules/*' -type f -name '*.es6')",
+    "eslint": "eslint src test-project",
     "test-project:prj1": "DEBUG=debug*,libs* babel-node test-project/prj1",
     "test-project:prj2": "DEBUG=debug*,libs* babel-node test-project/prj2",
     "test-project:prj3": "DEBUG=debug*,libs* babel-node test-project/prj3",
