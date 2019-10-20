@@ -33,7 +33,7 @@
     "eslint": "^6.5.1"
   },
   "dependencies": {
-    "debug": "^2.2.0",
-    "simple-debugger": "^1.0.3"
+    "debug": "^4.1.1",
+    "simple-debugger": "^3.0.0"
   }
 }
