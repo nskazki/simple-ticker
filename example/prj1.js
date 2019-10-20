@@ -1,3 +1,5 @@
+// DEBUG=debug*,libs* babel-node example/prj1
+
 'use strict'
 
 import Ticker from '../src'
