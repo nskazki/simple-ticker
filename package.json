@@ -18,7 +18,7 @@
   },
   "main": "build",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepublish": "yarn run build",
     "build": "babel src -d build",
     "eslint": "eslint --ext .json,.js .",
     "test": "echo \"Error: no test specified\" && exit 1"
