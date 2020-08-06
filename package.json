@@ -2,7 +2,7 @@
   "name": "simple-ticker",
   "author": "nskazki@gmail.com",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A self-correcting emitter of periodical events",
   "homepage": "https://github.com/nskazki/simple-ticker",
   "keywords": [
