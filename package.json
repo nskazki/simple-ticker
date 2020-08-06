@@ -20,7 +20,7 @@
   "scripts": {
     "prepublish": "npm run build",
     "build": "babel src -d build",
-    "eslint": "eslint .",
+    "eslint": "eslint --ext .json,.js .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
@@ -30,7 +30,8 @@
     "@babel/preset-env": "^7.6.3",
     "babel-eslint": "^10.0.3",
     "babel-plugin-add-module-exports": "^1.0.2",
-    "eslint": "^6.5.1"
+    "eslint": "^6.5.1",
+    "eslint-plugin-json": "^2.1.2"
   },
   "dependencies": {
     "debug": "^4.1.1",

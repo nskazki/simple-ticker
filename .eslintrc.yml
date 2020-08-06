@@ -1,4 +1,6 @@
 ---
+root: true
+
 parser: babel-eslint
 
 rules:
@@ -17,6 +19,8 @@ rules:
   no-multiple-empty-lines:
   - warn
   - max: 1
+    maxBOF: 0
+    maxEOF: 0
   # spacing safe
   key-spacing:
   - warn
@@ -33,17 +37,19 @@ rules:
   object-curly-spacing:
   - warn
   - always
-  array-bracket-spacing: warn
   array-bracket-newline:
   - warn
   - consistent
   array-element-newline:
   - warn
   - consistent
+  array-bracket-spacing: warn
   computed-property-spacing: warn
   space-before-function-paren:
   - warn
-  - never
+  - anonymous: never
+    named: never
+    asyncArrow: always
   no-whitespace-before-property: warn
   # vars safe
   prefer-const: warn
@@ -65,6 +71,7 @@ rules:
   - warn
   - multi-line
   - consistent
+  strict: warn
   eqeqeq: warn
   quotes:
   - warn
@@ -78,6 +85,8 @@ rules:
   - as-needed
   comma-dangle: warn
   dot-notation: warn
+  object-shorthand: warn
+  prefer-arrow-callback: warn
   no-extra-parens:
   - warn
   - functions
@@ -107,7 +116,6 @@ rules:
   no-implied-eval: error
   no-octal-escape: error
   no-self-compare: error
-  object-shorthand: warn
   no-useless-return: error
   no-floating-decimal: error
   no-use-before-define:
@@ -115,7 +123,9 @@ rules:
   - classes: false
     variables: false
     functions: false
-  prefer-arrow-callback: warn
+  no-restricted-globals:
+  - error
+  - toString
   no-unmodified-loop-condition: error
   # code-style unsafe but often used during development
   no-alert: warn
@@ -123,8 +133,35 @@ rules:
 
 env:
   node: true
+  jest: true
+  jasmine: true
+  browser: false # brings lots of shodow variables like "length" and "self"
+
+globals:
+  Node: readonly
+  Proxy: readonly
+  window: readonly
+  Element: readonly
+  Promise: readonly
+  NodeList: readonly
+  document: readonly
+  console: readonly
+  performance: readonly
+  setInterval: readonly
+  setTimeout: readonly
+  setImmediate: readonly
+  clearInterval: readonly
+  clearTimeout: readonly
+  clearImmediate: readonly
+  ResizeObserver: readonly
+  MutationObserver: readonly
+  cancelIdleCallback: readonly
+  requestIdleCallback: readonly
+  cancelAnimationFrame: readonly
+  requestAnimationFrame: readonly
 
 extends:
 - eslint:recommended
+- plugin:json/recommended-with-comments
 
 reportUnusedDisableDirectives: true
