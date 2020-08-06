@@ -1,7 +1,5 @@
 // DEBUG=debug*,libs* babel-node example/prj3
 
-'use strict'
-
 import Ticker from '../src'
 
 let initCount = 0
@@ -26,4 +24,3 @@ const ticker = new Ticker(100, 200)
       }
     }
   })
-

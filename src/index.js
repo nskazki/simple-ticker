@@ -1,5 +1,3 @@
-'use strict'
-
 import { debugEvents, debugMethods } from 'simple-debugger'
 import EventEmitter from 'events'
 import Debug from 'debug'
